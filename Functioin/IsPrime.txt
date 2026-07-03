@@ -1,0 +1,21 @@
+enum CheckPrime{Prime,NotPrime};
+
+CheckPrime ISPrime(int n)
+{
+
+		if(n<=1)
+			return CheckPrime::NotPrime;
+		for (int i = 2; i < sqrt(n); i++)
+	{
+	
+	if(n%i==0)
+			return CheckPrime::NotPrime;
+		
+	}
+	
+	
+
+	return CheckPrime::Prime;
+	
+
+}

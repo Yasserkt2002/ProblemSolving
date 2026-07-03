@@ -1,0 +1,5 @@
+int RandomNumber(int from,int to)
+{
+	int RandomNum=from+rand()%(to-from+1);
+	return RandomNum;
+}

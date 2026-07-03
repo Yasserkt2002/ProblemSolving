@@ -1,0 +1,11 @@
+void ReadArray(int arr[],int &size)
+{
+
+	size=ReadPositiveNumber("enter number of elements \n");
+	 cout<<"enter Array elements \n";
+	for (int i = 0; i < size; i++)
+	{
+		arr[i]=ReadPositiveNumber("\nElement["+to_string(i+1)+"] :");
+	}
+}
+

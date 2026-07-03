@@ -1,0 +1,111 @@
+
+package thread_experence_temp;
+
+public class GameMath extends Thread
+{
+ long time;
+  
+  GameMath(long time)
+  {
+      this.time= time;
+  }
+    @Override
+  public void run()
+ {
+     try
+     {
+         
+     Thread.sleep(time);
+     }catch(Exception e)
+     {
+       System.out.println("There is an Exception "+e);
+     }
+ }
+    
+    
+}
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+package thread_experence_temp;
+
+import static java.lang.Math.random;
+import java.util.Date;
+import java.util.Scanner;
+public class Thread_experence_temp 
+{
+    public static void main(String[] args) throws InterruptedException 
+    {
+       Scanner in=new Scanner(System.in);
+        System.out.println("Enter the time you want ");
+       long time=in.nextLong();
+       time*=1000;
+       GameMath t=new GameMath(time);
+       t.start();
+       
+               int 
+               Number1=0 , 
+               Number2=0 ,
+               CorrectAnswer =0,
+               NumerOfAnswer=0 ,
+               NumberOfCorrectAnswer=0 , 
+               NumberOfWrongAnswer=0;
+               
+ 
+              CorrectAnswer=Number2+Number1;
+             System.out.println("_________________________ QUIZ _________________________");
+              while(t.isAlive())
+              {
+              Number1 =(int)(random()*100); 
+              Number2 =(int)(random()*100);
+              CorrectAnswer=Number2+Number1;
+
+                 System.out.println("\nenter the Answer :");
+                 System.out.println((Number2+"+"+Number1)+"=");
+                 int AnswerUser=in.nextInt();
+                  if(AnswerUser==CorrectAnswer)
+                         NumberOfCorrectAnswer++;
+                  else
+                         NumberOfWrongAnswer++;
+                      NumerOfAnswer++;
+                  
+                  
+                  
+                  
+              }
+              System.out.println("|------------ The results is ------------|");
+        System.out.println("|   The Number of total Answer is : "+NumerOfAnswer+"\t |");
+        System.out.println("|   the Correct answer is : "+NumberOfCorrectAnswer+"\t\t |");
+        System.out.println("|   the Wrong answer is : "+NumberOfWrongAnswer+"\t\t |");
+              System.out.println("|----------------------------------------|");
+
+    }
+    
+    
+}
+
+    
+    
+
+                 
+                  
+                  
+              }
+              System.out.println("------------ The results is ------------");
+        System.out.println("The Number of total answer is : "+NumerOfAnswer);
+        System.out.println("the Correct answer is : "+NumberOfCorrectAnswer);
+        System.out.println("the Wrong answer is : "+NumberOfWrongAnswer);
+              System.out.println("--------------- ------------------------");
+
+    }
+    
+    
+}
+
+    
+    
+

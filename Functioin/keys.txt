@@ -1,0 +1,56 @@
+enum enCharType{CAPITAL='C',SMALL='S',SPICHAL='s',NUMBER='N'};
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+char GenerateChar(enCharType ct)
+{
+	switch(ct)
+	{
+	case enCharType::CAPITAL:
+		return (char)RandomNumber(65,90);
+	case enCharType::NUMBER:
+		return RandomNumber(48,57);
+	case enCharType::SMALL:
+		return RandomNumber(97,122);
+	case enCharType::SPICHAL:
+		return   RandomNumber(33,47);
+
+	}
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+string GenerateWord(enCharType ct,int SizeOfWord)
+{
+	string word="";
+	for (int i = 0; i < SizeOfWord; i++)
+	{
+		word+=GenerateChar(ct);
+	}
+	return word;
+
+}
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+string GenerateKey(enCharType ct,int NumberOfWord,int SizeOfword)
+{
+
+	string key="";
+	for (int i = 0; i < NumberOfWord; i++)
+	{
+		key+=GenerateWord(ct,SizeOfword);
+		if(NumberOfWord==i+1)
+			continue;
+		key+="-";
+	}
+	return key;
+
+
+}

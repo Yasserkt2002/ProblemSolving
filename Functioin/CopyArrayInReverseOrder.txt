@@ -1,0 +1,9 @@
+void CopyArrayInReverseOrder(int arr[],int arr2[],int Length)
+{
+
+	for (int i = 0; i < Length ;i++)
+	{
+		arr2[i]=arr[Length-1-i];
+		
+	}
+}

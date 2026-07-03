@@ -1,0 +1,7 @@
+string ReadText(string m)
+{
+	string n;
+	cout<<m;
+	getline(cin,n);
+	return n;
+}

@@ -1,0 +1,36 @@
+//#pragma once
+#include<iostream>
+#include<string>
+using namespace std;
+namespace Yasser_Library
+{
+
+	int ReadNumber(string Message)
+{
+	int Number;
+
+		cout<<Message;
+		cin>>Number;
+		return Number;
+	}
+
+
+
+	int ReadPositiveNumber(string Message)
+{
+	int Number;
+	do
+	{
+		cout<<Message;
+		cin>>Number;
+	}while(Number<0);
+	return Number;
+}
+
+
+	int RandomNumber(int from,int to)
+{
+	int RandomNum=from+rand()%(to-from+1);
+	return RandomNum;
+}
+}

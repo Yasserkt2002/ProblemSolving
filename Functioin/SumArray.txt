@@ -1,0 +1,9 @@
+int SumArray(int arr[],int Length)
+{
+	int sum=0;
+	for (int i = 0; i < Length; i++)
+	{
+	sum+=arr[i];
+	}
+	return sum;
+}
