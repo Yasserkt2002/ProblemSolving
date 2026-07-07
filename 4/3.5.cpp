@@ -1,8 +1,6 @@
-//ßÇä áÇÒã ÛííÑ ÇÓãÇÁ ÇáãÊÛíÑÇÊ áÇä åæä ãæ Øæá æÚÑÖ
-//ÇäÇ äÓÎÊ ÇáßæÏ ÇáÔÈíå æÈÓ ÛíÑÊ ãÚÇÏáÉ ÇáÍÓÇÈ ÈÇáÑíÊíÑä
+ //p 15
 #include<iostream>
 #include<string>
-#include<math.h>
 using namespace std;
 void Read_High_Width(int &h,int &w)
 {cout<<"high=";
@@ -10,11 +8,11 @@ cin>>h;
 cout<<endl<<"width=";
 cin>>w;
 }
-float Get_Rec_Area(int w,int h)
+int Get_Rec_Area(int w,int h)
 {
-	return (float)w*sqrt(pow(h,2)-pow(w,2));
+	return w*h;
 }
-void Print(float area)
+void Print(int area)
 {
 	cout<<"area="<<area;
 }
